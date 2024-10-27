@@ -29,3 +29,56 @@ Before you begin, ensure you have the following installed:
    git clone https://github.com/YourGitHubUsername/weather-forecast-app.git
    cd weather-forecast-app
 
+2. **Install Dependencies**:
+bash
+   npm install
+   
+3. **Configure Environment Variables**: Create a `.env` file in the root directory and set your MongoDB connection URI and OpenWeatherMap API key:
+env
+   MONGODB_URI=your_mongodb_connection_uri
+   OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
+   
+4. **Run the Application**:
+bash
+   npm start
+   
+Your application will be live at `http://localhost:5000`.
+
+---
+
+## 📁 Project Structure
+
+- **server.js**: Main server file, handles API routes and application logic.
+- **weatherService.js**: A service that periodically fetches and updates weather data from the OpenWeatherMap API.
+- **schema.js**: Defines Mongoose schema for efficient data storage and updates.
+
+---
+
+## 🔄 API Functionality
+
+- **Fetch Weather by City**: `/api/weather/:city` - Retrieves current weather data for the specified city.
+- **Daily Summary**: `/api/weather/daily` - Provides a daily summary with key metrics like average temperature, humidity, and conditions.
+
+### Data Handling & Optimization
+
+To conserve database resources, only 6 weather documents are stored at any time, each representing a time slot throughout the day. Every 5 minutes, the system updates the relevant documents to keep the data fresh without cluttering MongoDB.
+
+---
+
+## 🧩 Future Enhancements
+- **Extended Forecasting**: Provide weekly and monthly weather trends.
+- **Custom Alerts**: Allow users to set up notifications for severe weather alerts.
+- **Data Visualization**: Interactive charts for hourly and daily weather trends.
+
+---
+
+## 🤝 Contributing
+We welcome contributions! To get started, fork the repository, make your changes, and submit a pull request. Please ensure all new features include appropriate documentation.
+
+---
+
+## 💬 Contact
+For questions or feedback, feel free to reach out at your-email@example.com.
+
+
+
