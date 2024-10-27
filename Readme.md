@@ -8,8 +8,8 @@ A web application that provides real-time weather updates and forecasts for mult
 - Real-time updates with automatic refresh every 5 minutes.
 - Interactive user interface with forecast visuals.
 
-## Screenshots
-*(Add screenshots here to showcase the app interface.)*
+## Project Video
+(https://youtu.be/DfRpss9XWuE)
 
 ## Getting Started
 
