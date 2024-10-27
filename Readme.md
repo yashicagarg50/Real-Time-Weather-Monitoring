@@ -5,6 +5,7 @@ A web application delivering real-time weather updates and forecasts for major m
 ## 🌟 Key Features
 - **Optimized Data Storage**: MongoDB is configured to store only 6 core weather documents, which are updated every 5 minutes rather than storing new documents. This ensures efficient use of storage while keeping the data up-to-date.
 - **Automated Data Refresh**: Weather data refreshes automatically every 5 minutes for continuous real-time accuracy.
+- **Alert**: Alerts are given when temperature increases the threshold temp.
 - **User-Friendly Interface**: A responsive front-end that allows users to search by city for instant weather insights.
 
 ---
@@ -30,20 +31,23 @@ Before you begin, ensure you have the following installed:
    cd weather-forecast-app
 
 2. **Install Dependencies**:
-bash
+   ```bash
    npm install
-   
-3. **Configure Environment Variables**: Create a `.env` file in the root directory and set your MongoDB connection URI and OpenWeatherMap API key:
-env
+
+3. **Configure Environment Variables**: Create a `.env` file in the root directory and set your MongoDB connection URI and OpenWeatherMap API key:   
+   ```env
    MONGODB_URI=your_mongodb_connection_uri
    OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
    
 4. **Run the Application**:
-bash
-   npm start
-   
-Your application will be live at `http://localhost:5000`.
+   ```bash
+   npm run dev
+Your application will be live at `http://localhost:5174`.
 
+5. **Run the Node Application**:
+   ```bash
+   node server.js 
+   
 ---
 
 ## 📁 Project Structure
@@ -57,7 +61,6 @@ Your application will be live at `http://localhost:5000`.
 ## 🔄 API Functionality
 
 - **Fetch Weather by City**: `/api/weather/:city` - Retrieves current weather data for the specified city.
-- **Daily Summary**: `/api/weather/daily` - Provides a daily summary with key metrics like average temperature, humidity, and conditions.
 
 ### Data Handling & Optimization
 
@@ -72,13 +75,8 @@ To conserve database resources, only 6 weather documents are stored at any time,
 
 ---
 
-## 🤝 Contributing
-We welcome contributions! To get started, fork the repository, make your changes, and submit a pull request. Please ensure all new features include appropriate documentation.
-
----
-
 ## 💬 Contact
-For questions or feedback, feel free to reach out at your-email@example.com.
+For questions or feedback, feel free to reach out at anniegirdhar08@gmail.com.
 
 
 
